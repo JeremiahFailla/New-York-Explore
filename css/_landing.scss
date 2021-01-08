@@ -1,0 +1,167 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("./../img/nyc.jpg") no-repeat 750px / cover;
+  z-index: 5;
+  overflow-y: hidden;
+
+  & * {
+    z-index: 100;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: rgb(0, 0, 0);
+    z-index: 0;
+  }
+
+  .slant {
+    position: absolute;
+    width: 1700px;
+    height: 2500px;
+    left: -250px;
+    top: -500px;
+    background-color: white;
+    transform: rotate(20deg);
+    z-index: 6;
+    border-bottom: 1px solid $primary;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: auto;
+    width: 1531px;
+    padding: 2rem 0 2rem 200px;
+    background: grey;
+    border-bottom: 1px solid $primary;
+
+    .logo {
+      font-size: 2.5rem;
+      color: rgb(144, 29, 29);
+      font-weight: 600;
+      border-bottom: 1px solid grey;
+      box-shadow: 3px 5px 5px 5px black;
+      padding: 0 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-bottom: 1px solid $primary;
+        box-shadow: 3px 5px 5px 5px $secondary;
+      }
+    }
+
+    .main-nav .nav-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      list-style-type: none;
+
+      &:hover li .link {
+        opacity: 0.2;
+      }
+
+      li {
+        .link {
+          padding: 2rem;
+          font-size: 1.5rem;
+          color: $secondary;
+          transition: all 0.3s ease-in-out;
+          color: black;
+
+          &:hover {
+            color: $secondary;
+            font-weight: 500;
+            opacity: 1;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        top: -107px;
+        right: -2px;
+        position: absolute;
+        transform-origin: bottom right;
+        z-index: 8;
+        width: 50px;
+        height: 200px;
+        background-color: grey;
+        transform: rotate(20deg);
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-grow: 1;
+    height: 100%;
+    width: 1000px;
+    margin: 0 200px;
+
+    p {
+      font-size: 2rem;
+      color: $primary;
+      line-height: 3.5rem;
+      letter-spacing: 0.3rem;
+
+      .bold {
+        display: inline-block;
+        margin-top: 2rem;
+        color: rgb(144, 29, 29);
+        font-weight: 700;
+        border-bottom: 1px solid white;
+        transition: all 0.3s ease-in-out;
+        letter-spacing: 0.4rem;
+
+        &:hover {
+          border-bottom: 1px solid $primary;
+        }
+      }
+    }
+
+    ul {
+      position: absolute;
+      left: 180px;
+      bottom: 0;
+      display: flex;
+      justify-self: end;
+      margin-bottom: 2rem;
+
+      &:hover li .link {
+        opacity: 0.2;
+      }
+
+      li .link {
+        align-items: center;
+        color: $primary;
+        font-size: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+        margin-right: 1.5rem;
+
+        &:hover {
+          opacity: 1;
+          border-bottom: 2px solid rgb(144, 29, 29);
+          color: rgb(144, 29, 29);
+        }
+      }
+    }
+  }
+}
