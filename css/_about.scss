@@ -4,7 +4,7 @@
   position: relative;
   overflow-y: hidden;
   // background-color: rgba(0, 0, 0, 0.1);
-  border-top: 10px solid $secondary;
+  border-top: 5px solid $secondary;
 
   &::before {
     content: "";
@@ -27,8 +27,8 @@
     position: relative;
     flex-direction: column;
     width: 80%;
-    margin: auto;
-    background: rgba(240, 240, 240, 0.4);
+    margin: 5rem auto;
+    background: rgba(240, 240, 240, 0.9);
     border-radius: 10px;
     padding: 5rem;
 
@@ -43,14 +43,14 @@
 
       &:hover {
         background: rgb(100, 100, 100);
-        color: $secondary;
+        color: $third;
       }
 
-      &:hover h1 {
-        border-color: white;
+      &:hover h2 {
+        border-color: $third;
       }
 
-      h1 {
+      h2 {
         color: inherit;
         border-bottom: 1px solid $primary;
       }

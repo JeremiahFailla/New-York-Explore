@@ -48,7 +48,7 @@
 
     .logo {
       font-size: 2.5rem;
-      color: rgb(144, 29, 29);
+      color: $primary;
       font-weight: 600;
       border-bottom: 1px solid grey;
       box-shadow: 3px 5px 5px 5px black;
@@ -76,9 +76,8 @@
         .link {
           padding: 2rem;
           font-size: 1.5rem;
-          color: $secondary;
           transition: all 0.3s ease-in-out;
-          color: black;
+          color: $third;
 
           &:hover {
             color: $secondary;
@@ -130,7 +129,8 @@
         letter-spacing: 0.4rem;
 
         &:hover {
-          border-bottom: 1px solid $primary;
+          color: $third;
+          border-bottom: 1px solid $third;
         }
       }
     }
