@@ -1,0 +1,27 @@
+{
+  "name": "nyexplore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremiahFailla/New-York-Explore.git"
+  },
+  "author": "Jeremiah Failla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeremiahFailla/New-York-Explore/issues"
+  },
+  "homepage": "https://github.com/JeremiahFailla/New-York-Explore#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.32.2"
+  },
+  "dependencies": {
+    "sal.js": "^0.8.2"
+  }
+}

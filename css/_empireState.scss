@@ -12,13 +12,13 @@
     width: 80%;
     margin: auto;
     border-radius: 10px;
-    padding: 5rem;
+    padding: 4rem;
     margin-top: 4rem;
 
     .title {
       background: rgba(240, 240, 240, 0.9);
       border-radius: 10px;
-      width: 500px;
+      width: 400px;
       text-align: center;
       padding: 2rem;
       transition: all 0.3s ease-in-out;
@@ -34,21 +34,53 @@
       }
 
       h2 {
+        font-size: 1.3rem;
         color: inherit;
         border-bottom: 1px solid $primary;
       }
     }
 
-    .img-container {
+    .content {
       margin-top: 5rem;
-      height: 100%;
-      width: 100%;
+      background: rgba(240, 240, 240, 0.9);
+      padding: 2rem;
+      border-radius: 1rem;
+      .about-info {
+        margin-right: 3rem;
+        .info {
+          p {
+            padding: 1rem;
+            font-size: 1.1rem;
+            border-right: 1px solid $primary;
+          }
+        }
+      }
 
-      .img {
-        height: 800px;
-        width: 800px;
-        background: url("./../img/empire\ state.jpg") no-repeat center / cover;
-        border-radius: 10px;
+      .img-container {
+        .img {
+          height: 500px;
+          width: 500px;
+          background: url("./../img/empire\ state.jpg") no-repeat center / cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .go-top {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 2rem;
+
+      i {
+        font-size: 3rem;
+        color: rgba(240, 240, 240, 0.9);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+          color: $third;
+        }
       }
     }
   }

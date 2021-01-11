@@ -9,7 +9,7 @@
   overflow-y: hidden;
 
   & * {
-    z-index: 100;
+    z-index: 10;
   }
 
   &:after {
@@ -26,28 +26,29 @@
 
   .slant {
     position: absolute;
-    width: 1700px;
+    width: 1400px;
     height: 2500px;
     left: -250px;
     top: -500px;
     background-color: white;
     transform: rotate(20deg);
-    z-index: 6;
+    z-index: 5;
     border-bottom: 1px solid $primary;
   }
 
   header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-content: center;
     height: auto;
-    width: 1531px;
-    padding: 2rem 0 2rem 200px;
+    width: 1234px;
+    padding: 1.5rem 0 1.5rem 200px;
     background: grey;
     border-bottom: 1px solid $primary;
 
     .logo {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: $primary;
       font-weight: 600;
       border-bottom: 1px solid grey;
@@ -75,7 +76,7 @@
       li {
         .link {
           padding: 2rem;
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           transition: all 0.3s ease-in-out;
           color: $third;
 
@@ -86,19 +87,19 @@
           }
         }
       }
+    }
 
-      &::after {
-        content: "";
-        top: -107px;
-        right: -2px;
-        position: absolute;
-        transform-origin: bottom right;
-        z-index: 8;
-        width: 50px;
-        height: 200px;
-        background-color: grey;
-        transform: rotate(20deg);
-      }
+    &::after {
+      content: "";
+      top: -15px;
+      right: 0px;
+      position: absolute;
+      transform-origin: bottom right;
+      z-index: 5;
+      width: 50px;
+      height: 110px;
+      background-color: grey;
+      transform: rotate(20deg);
     }
   }
 
@@ -114,14 +115,14 @@
     margin: 0 200px;
 
     p {
-      font-size: 2rem;
+      font-size: 1.3rem;
       color: $primary;
       line-height: 3.5rem;
       letter-spacing: 0.3rem;
 
       .bold {
         display: inline-block;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         color: rgb(144, 29, 29);
         font-weight: 700;
         border-bottom: 1px solid white;
@@ -150,7 +151,7 @@
       li .link {
         align-items: center;
         color: $primary;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         transition: all 0.3s ease-in-out;
         padding: 1rem;
         border-bottom: 2px solid white;

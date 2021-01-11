@@ -30,7 +30,7 @@
     margin: 5rem auto;
     background: rgba(240, 240, 240, 0.9);
     border-radius: 10px;
-    padding: 5rem;
+    padding: 4rem;
 
     .title {
       background: white;
@@ -51,45 +51,54 @@
       }
 
       h2 {
+        font-size: 1.4rem;
         color: inherit;
         border-bottom: 1px solid $primary;
       }
     }
 
-    .img-container {
-      margin-top: 5rem;
-      height: 100%;
-      width: 100%;
+    .content {
+      margin-top: 2rem;
+      background: rgb(255, 255, 255);
+      padding: 40px;
+      border-radius: 15px;
 
-      .img {
-        height: 800px;
-        width: 800px;
-        background: url("./../img/about.jpg") no-repeat center / cover;
-        border-radius: 10px;
+      .img-container {
+        .img {
+          height: 500px;
+          width: 500px;
+          background: url("./../img/about.jpg") no-repeat center / cover;
+          border-radius: 10px;
+        }
       }
-    }
-    .about-info {
-      height: 100%;
+      .about-info {
+        height: 100%;
 
-      .info {
-        margin-top: 2rem;
-        font-size: 1.2rem;
-        background: rgb(255, 255, 255);
-        border-radius: 10px;
-        padding: 2rem;
+        .info {
+          margin-top: 2rem;
+          padding: 1rem;
+          border-left: 1px solid $primary;
+          margin-left: 1.5rem;
+        }
       }
     }
 
     .go-top {
       position: absolute;
       right: 0;
-      bottom: -150px;
-      color: white;
+      bottom: -12px;
+      padding: 2rem;
+      border-radius: 20px 0 0 0;
+      background: white;
 
       i {
+        font-size: 3rem;
+        color: rgb(207, 207, 207);
+        transition: all 0.3s ease-in-out;
+
         &:hover {
-          font-size: 3.5rem;
-          color: $primary;
+          transform: scale(1.2);
+          color: $third;
         }
       }
     }
