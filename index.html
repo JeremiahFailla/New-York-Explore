@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
+    <!-- <link rel="stylesheet" href="./css/main.scss"> -->
+
     <script src="./js/main.js" defer></script>
     <title>New York Explore</title>
 </head>
@@ -27,18 +29,21 @@
             
         </header>
         <div class="main-content">
-            <p>Do you want to explore everything that New York city has to offer from the Empire State Building to the Statue of Liberty <br>
+            <p>Do you want to explore everything that New York city has to offer from the Empire State Building to the Statue of Liberty<br>
             <a href="#about" class="bold link">If so, start here</a>
             </p>
 
             <ul>
-                <li><a href="#about" class="link">Discover</a></li>
-                <li><a href="#empire-state" class="link">Empire State Building</a></li>
-                <li><a href="#" class="link">Statue of Liberty</a></li>
-                <li><a href="#" class="link">9/11 Memorial</a></li>
+                <li class="flex"><a href="#about" class="link">Discover</a></li>
+                <li class="flex"><a href="#empire-state" class="link">Empire State Building</a></li>
+                <li class="flex"><a href="#" class="link">Statue of Liberty</a></li>
+                <li class="flex"><a href="#" class="link">9/11 Memorial</a></li>
             </ul>
         </div>
+        <img src="./img/nyc.webp" alt="New York City">
     </section>
+    
+
 
     <section class="about flex" id="about">
         <div class="container flex">
@@ -48,9 +53,7 @@
             </div>
             <div class="content flex">
                 <div class="img-container flex">
-                    <div class="img">
-                        
-                    </div>
+                    <img src="./img/about.webp" alt="New York City" class="img" loading="lazy" height="500px" width="500px">
                 </div>
                 <div class="about-info flex">
                     <div class="info flex">
@@ -58,11 +61,12 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
+            
         </div>
+        <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
 
-    <section class="empire-state" id="empire-state">
+    <section class="empire-state flex" id="empire-state">
         <div class="container flex">
             <div class="title">
                 <h2>Empire State Building</h1>
@@ -74,11 +78,12 @@
                     </div>
                 </div>
                 <div class="img-container flex">
-                    <div class="img"></div>
+                    <img src="./img/empire state.webp" alt="Empire state building" class="img" loading="lazy" height="500px" width="500px">
                 </div>
             </div>
-            <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
+            
         </div>
+        <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
     <section class="quotes flex">
         <div class="container flex">
@@ -132,13 +137,18 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
+            
         </div>
+        <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
     <footer>
+        <img src="./img/footer.webp" alt="Footer image" class="img" height="500px" width="500px" loading="lazy">
         <div class="container flex">
-            <div class="location">
+            <div class="location flex">
                 <p>Location</p>
+                <div class="text">
+                    New York
+                </div>
             </div>
             <div class="social flex">
                 <p>Social Media</p>

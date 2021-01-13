@@ -20,21 +20,30 @@ ul {
   text-decoration: none;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img {
+img {
   max-width: 100%;
+  height: auto;
 }
 
 section {
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
+}
+
+@mixin phone {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
 }

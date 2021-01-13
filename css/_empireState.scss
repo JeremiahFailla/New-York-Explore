@@ -1,11 +1,15 @@
 .empire-state {
   border-top: 2px solid rgb(100, 100, 100);
   position: relative;
+  z-index: 10;
+  background-color: white;
+  flex-direction: column;
 
   & * {
     z-index: 100;
     position: relative;
   }
+
   .container {
     position: relative;
     flex-direction: column;
@@ -15,6 +19,17 @@
     padding: 4rem;
     margin-top: 4rem;
 
+    @include phone {
+      width: 100%;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    @include tablet {
+      margin-top: 2rem;
+      padding-top: 2rem;
+    }
+
     .title {
       background: rgba(240, 240, 240, 0.9);
       border-radius: 10px;
@@ -23,6 +38,12 @@
       padding: 2rem;
       transition: all 0.3s ease-in-out;
       color: $primary;
+
+      @include phone {
+        width: 300px;
+        background: transparent;
+        padding: 1rem;
+      }
 
       &:hover {
         background: rgb(100, 100, 100);
@@ -45,43 +66,75 @@
       background: rgba(240, 240, 240, 0.9);
       padding: 2rem;
       border-radius: 1rem;
+
+      @include phone {
+        flex-direction: column;
+        margin-top: 2rem;
+        background-color: transparent;
+      }
+
       .about-info {
+        order: 2;
         margin-right: 3rem;
+
         .info {
-          p {
-            padding: 1rem;
-            font-size: 1.1rem;
-            border-right: 1px solid $primary;
+          margin-top: 2rem;
+          padding: 1rem;
+          border-right: 1px solid $primary;
+          margin-right: 1.5rem;
+
+          @include phone {
+            border: none;
+            border-left: 1px solid $primary;
+            margin-right: 0;
+            margin-left: 1rem;
           }
+        }
+
+        @include phone {
+          margin: 0;
         }
       }
 
       .img-container {
+        order: 1;
         .img {
           height: 500px;
           width: 500px;
-          background: url("./../img/empire\ state.jpg") no-repeat center / cover;
           border-radius: 10px;
+
+          @include phone {
+            height: 300px;
+            width: 300px;
+            margin-bottom: 2rem;
+          }
         }
       }
     }
+  }
+  .go-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
 
-    .go-top {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: 2rem;
+    i {
+      font-size: 3rem;
+      color: rgba(240, 240, 240, 0.9);
+      transition: all 0.3s ease-in-out;
 
-      i {
-        font-size: 3rem;
-        color: rgba(240, 240, 240, 0.9);
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.2);
-          color: $third;
-        }
+      &:hover {
+        transform: scale(1.2);
+        color: $third;
       }
+
+      @include phone {
+        font-size: 2.5rem;
+      }
+    }
+
+    @include phone {
+      position: relative;
     }
   }
 }

@@ -184,192 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"css/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"css/main.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/sal.js/dist/sal.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/sal.js/dist/sal.js":[function(require,module,exports) {
-var define;
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-!function (e, t) {
-  "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) && "object" == (typeof module === "undefined" ? "undefined" : _typeof(module)) ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ? exports.sal = t() : e.sal = t();
-}(this, function () {
-  return function () {
-    "use strict";
-
-    var e = {
-      855: function _(e, t, n) {
-        function r(e, t) {
-          var n = Object.keys(e);
-
-          if (Object.getOwnPropertySymbols) {
-            var r = Object.getOwnPropertySymbols(e);
-            t && (r = r.filter(function (t) {
-              return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })), n.push.apply(n, r);
-          }
-
-          return n;
-        }
-
-        function o(e) {
-          for (var t = 1; t < arguments.length; t++) {
-            var n = null != arguments[t] ? arguments[t] : {};
-            t % 2 ? r(Object(n), !0).forEach(function (t) {
-              a(e, t, n[t]);
-            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : r(Object(n)).forEach(function (t) {
-              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-            });
-          }
-
-          return e;
-        }
-
-        function a(e, t, n) {
-          return t in e ? Object.defineProperty(e, t, {
-            value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
-          }) : e[t] = n, e;
-        }
-
-        n.d(t, {
-          default: function _default() {
-            return w;
-          }
-        });
-
-        var s = "Sal was not initialised! Probably it is used in SSR.",
-            i = "Your browser does not support IntersectionObserver!\nGet a polyfill from here:\nhttps://github.com/w3c/IntersectionObserver/tree/master/polyfill",
-            l = {
-          rootMargin: "0% 50%",
-          threshold: .5,
-          animateClassName: "sal-animate",
-          disabledClassName: "sal-disabled",
-          enterEventName: "sal:in",
-          exitEventName: "sal:out",
-          selector: "[data-sal]",
-          once: !0,
-          disabled: !1
-        },
-            c = [],
-            u = null,
-            d = function d(e) {
-          e && e !== l && (l = o(o({}, l), e));
-        },
-            f = function f(e) {
-          e.classList.remove(l.animateClassName);
-        },
-            b = function b(e, t) {
-          var n = new CustomEvent(e, {
-            bubbles: !0,
-            detail: t
-          });
-          t.target.dispatchEvent(n);
-        },
-            p = function p() {
-          document.body.classList.add(l.disabledClassName);
-        },
-            m = function m() {
-          u.disconnect(), u = null;
-        },
-            v = function v() {
-          return l.disabled || "function" == typeof l.disabled && l.disabled();
-        },
-            y = function y(e, t) {
-          e.forEach(function (e) {
-            var n = e.target,
-                r = void 0 !== n.dataset.salRepeat,
-                o = void 0 !== n.dataset.salOnce,
-                a = r || !(o || l.once);
-            e.intersectionRatio >= l.threshold ? (function (e) {
-              e.target.classList.add(l.animateClassName), b(l.enterEventName, e);
-            }(e), a || t.unobserve(n)) : a && function (e) {
-              f(e.target), b(l.exitEventName, e);
-            }(e);
-          });
-        },
-            O = function O() {
-          p(), m();
-        },
-            h = function h() {
-          document.body.classList.remove(l.disabledClassName), u = new IntersectionObserver(y, {
-            rootMargin: l.rootMargin,
-            threshold: l.threshold
-          }), (c = [].filter.call(document.querySelectorAll(l.selector), function (e) {
-            return !function (e) {
-              return e.classList.contains(l.animateClassName);
-            }(e, l.animateClassName);
-          })).forEach(function (e) {
-            return u.observe(e);
-          });
-        },
-            g = function g() {
-          var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          m(), Array.from(document.querySelectorAll(l.selector)).forEach(f), d(e), h();
-        };
-
-        var w = function w() {
-          var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-          if (d(e), "undefined" == typeof window) return console.warn(s), {
-            elements: c,
-            disable: O,
-            enable: h,
-            reset: g
-          };
-          if (!window.IntersectionObserver) throw p(), Error(i);
-          return v() ? p() : h(), {
-            elements: c,
-            disable: O,
-            enable: h,
-            reset: g
-          };
-        };
-      }
-    },
-        t = {};
-
-    function n(r) {
-      if (t[r]) return t[r].exports;
-      var o = t[r] = {
-        exports: {}
-      };
-      return e[r](o, o.exports, n), o.exports;
-    }
-
-    return n.d = function (e, t) {
-      for (var r in t) {
-        n.o(t, r) && !n.o(e, r) && Object.defineProperty(e, r, {
-          enumerable: !0,
-          get: t[r]
-        });
-      }
-    }, n.o = function (e, t) {
-      return Object.prototype.hasOwnProperty.call(e, t);
-    }, n(855);
-  }().default;
-});
-},{}],"js/main.js":[function(require,module,exports) {
-"use strict";
-
-require("./../css/main.scss");
-
-require("./../node_modules/sal.js/dist/sal.css");
-
-var _sal2 = _interopRequireDefault(require("sal.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _sal2.default)();
-},{"./../css/main.scss":"css/main.scss","./../node_modules/sal.js/dist/sal.css":"node_modules/sal.js/dist/sal.css","sal.js":"node_modules/sal.js/dist/sal.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\nyc.jpg":[["nyc.275ea5e2.jpg","img/nyc.jpg"],"img/nyc.jpg"],"./..\\img\\about.jpg":[["about.362ad159.jpg","img/about.jpg"],"img/about.jpg"],"./..\\img\\empire state.jpg":[["empire state.0b807774.jpg","img/empire state.jpg"],"img/empire state.jpg"],"./..\\img\\footer.jpg":[["footer.365ba88b.jpg","img/footer.jpg"],"img/footer.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58540" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61956" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -573,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
-//# sourceMappingURL=/main.fb6bbcaf.js.map
+},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/main.c52e0fe2.js.map
