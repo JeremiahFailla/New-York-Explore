@@ -66,6 +66,20 @@
       background: rgba(240, 240, 240, 0.9);
       padding: 2rem;
       border-radius: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: rgb(100, 100, 100);
+        color: $third;
+
+        .about-info .info {
+          border-color: $third;
+
+          p {
+            border-color: $third;
+          }
+        }
+      }
 
       @include phone {
         flex-direction: column;
@@ -74,11 +88,11 @@
       }
 
       .about-info {
-        order: 2;
         margin-right: 3rem;
 
         .info {
           margin-top: 2rem;
+          margin-left: 2rem;
           padding: 1rem;
           border-right: 1px solid $primary;
           margin-right: 1.5rem;
@@ -94,13 +108,16 @@
         @include phone {
           margin: 0;
         }
+
+        @include phone {
+          order: 2;
+        }
       }
 
       .img-container {
-        order: 1;
         .img {
-          height: 500px;
-          width: 500px;
+          // height: 500px;
+          // width: 500px;
           border-radius: 10px;
 
           @include phone {
@@ -109,6 +126,10 @@
             margin-bottom: 2rem;
           }
         }
+
+        @include phone {
+          order: 1;
+        }
       }
     }
   }
@@ -116,7 +137,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    padding: 2rem;
+    margin: 2rem;
 
     i {
       font-size: 3rem;

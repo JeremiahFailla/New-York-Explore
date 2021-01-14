@@ -1,0 +1,124 @@
+.memorial {
+  border-top: 2px solid rgb(100, 100, 100);
+  position: relative;
+  z-index: 10;
+  min-height: 60vh;
+  padding-bottom: 1px;
+
+  @include phone {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 80%;
+    height: 100%;
+    margin: 2rem auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title {
+      background: rgba(240, 240, 240, 0.9);
+      border-radius: 10px;
+      width: 400px;
+      text-align: center;
+      padding: 2rem;
+      transition: all 0.3s ease-in-out;
+      color: $primary;
+
+      @include phone {
+        width: 300px;
+        background: transparent;
+        padding: 1rem;
+      }
+
+      &:hover {
+        background: rgb(100, 100, 100);
+        color: $third;
+      }
+
+      &:hover p {
+        border-color: $third;
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: inherit;
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    .content {
+      background: rgba(240, 240, 240, 0.9);
+      margin: 7rem 0;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+
+      @include phone {
+        flex-direction: column;
+      }
+
+      &:hover {
+        background: rgb(100, 100, 100);
+
+        .text-content {
+          color: $third;
+          border-color: $third;
+        }
+      }
+
+      .text-content {
+        border-right: 1px solid $primary;
+        padding: 1rem;
+        margin-right: 1rem;
+
+        @include phone {
+          order: 2;
+          margin: 0;
+          margin-top: 2rem;
+          margin-left: 2rem;
+          border: none;
+          border-left: 1px solid $primary;
+        }
+      }
+
+      .img-container {
+        margin-left: 1rem;
+
+        @include phone {
+          order: 1;
+        }
+        .img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .go-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2rem;
+
+    i {
+      font-size: 3rem;
+      color: rgba(240, 240, 240, 0.9);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        color: $third;
+      }
+
+      @include phone {
+        font-size: 2.5rem;
+      }
+    }
+
+    @include phone {
+      position: relative;
+    }
+  }
+}

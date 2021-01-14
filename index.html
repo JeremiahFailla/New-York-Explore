@@ -18,32 +18,33 @@
     <section class="main">
         <div class="slant"></div>
         <header>
-            <a href="./index.html" class="logo link">New York Explore</a>
-            <nav class="main-nav" id="main-nav">
-                <ul id="nav-bar" class="nav-bar">
-                    <li><a href="./index.html" target="_blank" class="link">Home</a></li>
-                    <li><a href="https://www.nycgo.com/" target="_blank" class="link">NYC Guide</a></li>
-                    <li><a href="https://www.nytimes.com/" target="_blank" class="link">NY Times</a></li>
-                </ul>
-            </nav>
-            
+            <div class="content">
+                <a href="./index.html" class="logo link">New York Explore</a>
+                <nav class="main-nav" id="main-nav">
+                    <ul id="nav-bar" class="nav-bar">
+                        <li><a href="./index.html" target="_blank" class="link">Home</a></li>
+                        <li><a href="https://www.nycgo.com/" target="_blank" class="link">NYC Guide</a></li>
+                        <li><a href="https://www.nytimes.com/" target="_blank" class="link">NY Times</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <div class="main-content">
-            <p>Do you want to explore everything that New York city has to offer from the Empire State Building to the Statue of Liberty<br>
-            <a href="#about" class="bold link">If so, start here</a>
-            </p>
+            <div class="text">
+                <p>Do you want to explore everything that New York city has to offer from the Empire State Building to the Statue of Liberty<br>
+                <a href="#about" class="bold link">If so, start here</a>
+                </p>
 
-            <ul>
-                <li class="flex"><a href="#about" class="link">Discover</a></li>
-                <li class="flex"><a href="#empire-state" class="link">Empire State Building</a></li>
-                <li class="flex"><a href="#" class="link">Statue of Liberty</a></li>
-                <li class="flex"><a href="#" class="link">9/11 Memorial</a></li>
-            </ul>
+                <ul>
+                    <li class="flex"><a href="#about" class="link">Discover</a></li>
+                    <li class="flex"><a href="#empire-state" class="link">Empire State Building</a></li>
+                    <li class="flex"><a href="#" class="link">Statue of Liberty</a></li>
+                    <li class="flex"><a href="#" class="link">9/11 Memorial</a></li>
+                </ul>
+            </div>
         </div>
         <img src="./img/nyc.webp" alt="New York City">
     </section>
-    
-
 
     <section class="about flex" id="about">
         <div class="container flex">
@@ -85,13 +86,49 @@
         </div>
         <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
+
+    <section class="statue flex">
+        <div class="container flex">
+            <div class="title flex">
+                <p>Statue of Liberty</p>
+            </div>
+            <div class="content flex">
+                <div class="img-container">
+                    <img src="./img/statue of liberty.webp" alt="Statue of Liberty" loading="lazy" class="img">
+                </div>
+
+                <div class="text-container flex">
+                    <p>A gift from the French as a house warming gift that was actually not green to begin with</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
+    </section> 
+
+    <section class="memorial flex">
+        <div class="container flex">
+            <div class="title flex">
+                <p>September 11 Memorial</p>
+            </div>
+            <div class="content flex">
+                <div class="text-content flex">
+                    <p>Possibly one of the most devastating event in United States history where 2,996 people lost there lives</p>
+                </div>
+                <div class="img-container">
+                    <img src="./img/memorial.webp" alt="Twin towers memorial" class="img">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
+    </section>
+
     <section class="quotes flex">
         <div class="container flex">
             <div class="title flex">
                 <p>New York Marvel</p>
             </div>
             <div class="quote-area" id="quote-area">
-                <div class="box box1 flex" data-sal="slide-down" data-sal-duration="1400">
+                <div class="box box1 flex" data-sal="slide-right" data-sal-duration="1400">
                     <div class="profile flex">
                         <img src="./img/person1.jpg" alt="Person1">
                         <p>Billy Jean</p>
@@ -100,7 +137,7 @@
                         <p>This is the most beautiful city that you can every visit</p>
                     </div>
                 </div>
-                <div class="box box2 flex" data-sal="slide-right" data-sal-duration="1400">
+                <div class="box box2 flex" data-sal="slide-down" data-sal-duration="1400">
                     <div class="profile flex">
                         <img src="./img/person1.jpg" alt="Person1">
                         <p>Billy Jean</p>
@@ -141,7 +178,7 @@
         </div>
         <a href="#" class="go-top"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
-    <footer>
+    <footer class="flex">
         <img src="./img/footer.webp" alt="Footer image" class="img" height="500px" width="500px" loading="lazy">
         <div class="container flex">
             <div class="location flex">
